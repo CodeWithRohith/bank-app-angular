@@ -1,1 +1,40 @@
-<p>transaction-history works!</p>
+<div class="container mt-5">
+  <h2>Transaction History</h2>
+
+  <!-- Filter dropdown -->
+  <div class="mb-3">
+    <label class="form-label">Filter by Account</label>
+    <select class="form-select" [(ngModel)]="selectedAccountId">
+      <option [value]="0">-- All Accounts --</option>
+      <option *ngFor="let acc of accounts" [value]="acc.id">
+        {{ acc.name }} ({{ acc.type }})
+      </option>
+    </select>
+  </div>
+
+  <!-- Transaction Table -->
+  <table class="table table-bordered table-striped mt-3" *ngIf="filteredTransactions.length > 0; else noData">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tx of filteredTransactions">
+        <td>{{ tx.id }}</td>
+        <td>{{ getAccountName(tx.fromId) }}</td>
+        <td>{{ getAccountName(tx.toId) }}</td>
+        <td>${{ tx.amount }}</td>
+        <td>{{ tx.date | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noData>
+    <p class="text-muted">No transactions to show.</p>
+  </ng-template>
+</div>

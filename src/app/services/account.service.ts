@@ -15,6 +15,10 @@ export class AccountService {
 
   private nextId = 1;
 
+  private transactions: Transaction[] = [];
+  private nextTransactionId = 1;
+
+
   constructor() {}
 
   addAccount(account: Omit<Account, 'id'>): void {
@@ -36,6 +40,28 @@ export class AccountService {
     from.balance -= amount;
     to.balance += amount;
 
+    this.transactions.push({
+        id: this.nextTransactionId++,
+        fromId,
+        toId,
+        amount,
+        date: new Date()
+    });
+
     return 'Success';
-  }
+    }
+
+    getTransactions(): Transaction[] {
+    return [...this.transactions];
+    }
+
+
+}
+
+export interface Transaction {
+  id: number;
+  fromId: number;
+  toId: number;
+  amount: number;
+  date: Date;
 }

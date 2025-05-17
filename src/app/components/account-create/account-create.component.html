@@ -1,1 +1,45 @@
-<p>account-create works!</p>
+<div class="container mt-5">
+  <h2>Create New Account</h2>
+  <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+    
+    <div class="mb-3">
+      <label class="form-label">Account Name</label>
+      <input type="text" class="form-control" formControlName="accountName">
+      <div *ngIf="accountForm.get('accountName')?.invalid && accountForm.get('accountName')?.touched" class="text-danger">
+        Name is required (min 3 characters)
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Initial Balance</label>
+      <input type="number" class="form-control" formControlName="initialBalance">
+      <div *ngIf="accountForm.get('initialBalance')?.invalid && accountForm.get('initialBalance')?.touched" class="text-danger">
+        Must be greater than 0
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Account Type</label><br>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" value="chequing" formControlName="accountType">
+        <label class="form-check-label">Chequing</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" value="savings" formControlName="accountType">
+        <label class="form-check-label">Savings</label>
+      </div>
+    </div>
+
+    <button 
+      type="submit"
+      [ngClass]="{
+        'btn': true,
+        'btn-primary': accountType === 'chequing',
+        'btn-success': accountType === 'savings'
+      }"
+      [disabled]="accountForm.invalid">
+      Create Account
+    </button>
+
+  </form>
+</div>

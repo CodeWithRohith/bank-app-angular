@@ -29,9 +29,11 @@
       <input type="number" class="form-control" formControlName="amount">
     </div>
 
-    <button type="submit" class="btn btn-primary" [disabled]="transferForm.invalid">
-      Transfer
-    </button>
+    <app-button
+  [label]="'Transfer'"
+  [type]="'chequing'"   
+  [disabled]="transferForm.invalid"></app-button>
+
   </form>
 
   <div class="mt-3">

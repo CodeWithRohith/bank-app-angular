@@ -30,16 +30,22 @@
       </div>
     </div>
 
-    <button 
-      type="submit"
-      [ngClass]="{
-        'btn': true,
-        'btn-primary': accountType === 'chequing',
-        'btn-success': accountType === 'savings'
-      }"
-      [disabled]="accountForm.invalid">
-      Create Account
-    </button>
+    <app-button
+    [label]="'Create Account'"
+    [type]="accountType || 'default'"
+    [disabled]="accountForm.invalid"></app-button>
+
 
   </form>
+  <div *ngIf="lastCreatedAccount" class="card mt-4 shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title text-success">Account Created 🎉</h5>
+        <p class="card-text">
+        Name: <strong>{{ lastCreatedAccount.name }}</strong><br>
+        Type: <strong>{{ lastCreatedAccount.type }}</strong><br>
+        Balance: <strong>${{ lastCreatedAccount.balance }}</strong>
+        </p>
+    </div>
+    </div>
+
 </div>

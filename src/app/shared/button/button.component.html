@@ -1,1 +1,11 @@
-<p>button works!</p>
+<button
+  class="btn"
+  [ngClass]="{
+    'btn-primary': type === 'chequing',
+    'btn-success': type === 'savings',
+    'btn-secondary': type === 'default'
+  }"
+  [disabled]="disabled"
+>
+  {{ label }}
+</button>

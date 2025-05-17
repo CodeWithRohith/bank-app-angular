@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AccountService, Account } from '../../services/account.service';
+import { ButtonComponent } from '../../shared/button/button.component';
 
 
 @Component({
   selector: 'app-fund-transfer',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, ButtonComponent],
   templateUrl: './fund-transfer.component.html',
   styleUrl: './fund-transfer.component.scss'
 })

@@ -1,7 +1,12 @@
-<nav class="nav nav-pills p-3 bg-light">
-  <a routerLink="/create-account" class="nav-link">Create Account</a>
-  <a routerLink="/transfer" class="nav-link">Transfer Funds</a>
-  <a routerLink="/history" class="nav-link">Transaction History</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <span class="navbar-brand">💰 BrainRidge Bank</span>
+    <div class="navbar-nav">
+      <a class="nav-link" routerLink="/create-account" routerLinkActive="active">Create Account</a>
+      <a class="nav-link" routerLink="/transfer" routerLinkActive="active">Transfer Funds</a>
+      <a class="nav-link" routerLink="/history" routerLinkActive="active">Transaction History</a>
+    </div>
+  </div>
 </nav>
 
 <router-outlet></router-outlet>

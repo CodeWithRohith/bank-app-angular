@@ -7,7 +7,7 @@ import { AccountService, Account, Transaction } from '../../services/account.ser
 @Component({
   selector: 'app-transaction-history',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './transaction-history.component.html',
   styleUrl: './transaction-history.component.scss'
 })

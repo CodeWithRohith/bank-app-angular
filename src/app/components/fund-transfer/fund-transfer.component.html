@@ -1,1 +1,46 @@
 <p>fund-transfer works!</p>
+<div class="container mt-5">
+  <h2>Transfer Funds</h2>
+
+  <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
+    
+    <div class="mb-3">
+      <label class="form-label">From Account</label>
+      <select class="form-select" formControlName="fromAccount">
+        <option [ngValue]="null" disabled>Select an account</option>
+        <option *ngFor="let acc of accounts" [ngValue]="acc.id">
+            {{ acc.name }} ({{ acc.type }}) - ${{ acc.balance }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">To Account</label>
+      <select class="form-select" formControlName="toAccount">
+        <option [ngValue]="null" disabled>Select an account</option>
+        <option *ngFor="let acc of accounts" [ngValue]="acc.id">
+            {{ acc.name }} ({{ acc.type }}) - ${{ acc.balance }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Amount</label>
+      <input type="number" class="form-control" formControlName="amount">
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="transferForm.invalid">
+      Transfer
+    </button>
+  </form>
+
+  <div class="mt-3">
+    <div *ngIf="message" class="alert" 
+         [ngClass]="{
+           'alert-success': message.startsWith('✅'),
+           'alert-danger': message.startsWith('❌')
+         }">
+      {{ message }}
+    </div>
+  </div>
+</div>

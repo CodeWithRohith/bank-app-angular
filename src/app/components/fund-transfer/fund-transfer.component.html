@@ -37,12 +37,14 @@
   </form>
 
   <div class="mt-3">
-    <div *ngIf="message" class="alert" 
-         [ngClass]="{
-           'alert-success': message.startsWith('✅'),
-           'alert-danger': message.startsWith('❌')
-         }">
-      {{ message }}
+  <div 
+    class="alert" 
+    [ngClass]="{
+      'alert-success': message.startsWith('✅'),
+      'alert-danger': message.startsWith('❌')
+      }" 
+      [innerHTML]="message">
     </div>
   </div>
+
 </div>

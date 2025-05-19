@@ -5,8 +5,8 @@
   <div class="mb-3">
     <label class="form-label">Filter by Account</label>
     <select class="form-select" [(ngModel)]="selectedAccountId">
-      <option [value]="0">-- All Accounts --</option>
-      <option *ngFor="let acc of accounts" [value]="acc.id">
+      <option [ngValue]="0">-- All Accounts --</option>
+      <option *ngFor="let acc of accounts" [ngValue]="acc.id">
         {{ acc.name }} ({{ acc.type }})
       </option>
     </select>

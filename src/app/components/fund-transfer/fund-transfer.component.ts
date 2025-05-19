@@ -30,19 +30,25 @@ export class FundTransferComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { fromAccount, toAccount, amount } = this.transferForm.value;
+  const { fromAccount, toAccount, amount } = this.transferForm.value;
 
-    if (fromAccount === toAccount) {
-      this.message = '❌ Cannot transfer to the same account.';
-      return;
-    }
-
-    const result = this.accountService.transferFunds(fromAccount, toAccount, amount);
-    if (result === 'Success') {
-      this.message = `✅ Successfully transferred $${amount} from Account ${fromAccount} to ${toAccount}`;
-      this.transferForm.reset();
-    } else {
-      this.message = `❌ ${result}`;
-    }
+  if (fromAccount === toAccount) {
+    this.message = '❌ Cannot transfer to the same account.';
+    return;
   }
+
+  const result = this.accountService.transferFunds(fromAccount, toAccount, amount);
+
+  const fromAcc = this.accounts.find(acc => acc.id === fromAccount);
+  const toAcc = this.accounts.find(acc => acc.id === toAccount);
+
+  if (result === 'Success' && fromAcc && toAcc) {
+    this.message = `✅ Successfully transferred $${amount} from <strong>${fromAcc.name}</strong> (${fromAcc.type}) to <strong>${toAcc.name}</strong> (${toAcc.type})`;
+    this.transferForm.reset();
+  } else {
+    this.message = `❌ ${result}`;
+  }
+  }
+
+
 }

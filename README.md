@@ -165,17 +165,17 @@ Open your browser and visit:
 
 
 ## 📌 Notes
-This project is built using Angular 17+ with standalone components
+- This project is built using Angular 17+ with standalone components
 
-Styling is done using Bootstrap 5 via CDN (linked in src/index.html)
+- Styling is done using Bootstrap 5 via CDN (linked in src/index.html)
 
-No backend or database is used — data is stored temporarily in memory using Angular services
+- No backend or database is used — data is stored temporarily in memory using Angular services
 
-Duplicate name + type accounts prompt user confirmation
+- Duplicate name + type accounts prompt user confirmation
 
-Account numbers are auto-generated and uniquely identify each account
+- Account numbers are auto-generated and uniquely identify each account
 
-This project demonstrates clean component-based structure and real-world form validation patterns
+- This project demonstrates clean component-based structure and real-world form validation patterns
 
 ## 📬 Author
 Rohith Kumar Saravanan

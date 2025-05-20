@@ -111,29 +111,55 @@ Open your browser and visit:
 
 ## 🔖 Screenshots
 
+## Create Account
+
 ![image](https://github.com/user-attachments/assets/6e93c29e-e9ce-4f7b-8eae-b2f0234a8092)
+
+### Create Account: Validation Error
 
 ![image](https://github.com/user-attachments/assets/d5d79b7a-ec0b-4970-a2b7-1682dd77c2ea)
 
+### Create Account: Creating New Chequing Account (Blue Button)
+
 ![image](https://github.com/user-attachments/assets/c506da07-ad33-4cd5-851d-85db5a02174a)
+
+### Create Account: Account Created
 
 ![image](https://github.com/user-attachments/assets/94634711-99a3-47b9-9576-1953b8e3a118)
 
+### Create Account: Creating New Savings Account (Green Button)
+
 ![image](https://github.com/user-attachments/assets/cd49d69a-b091-4692-9d3a-1109572b8804)
+
+### Create Account: Prompt asking if check different user (Name + Account Type)
 
 ![image](https://github.com/user-attachments/assets/330454fb-9ba1-428a-a928-8938f85e30b7)
 
+## Transfer Funds
+
 ![image](https://github.com/user-attachments/assets/fa9c6ff2-6221-4ec9-b634-917285bd76e4)
+
+### Transfer Funds: Select Account from Drop-Down
 
 ![image](https://github.com/user-attachments/assets/5da4015b-651d-48c4-8acb-0edafa4a333d)
 
+### Transfer Funds: Same Account, Fail
+
 ![image](https://github.com/user-attachments/assets/e173fbc8-2473-4e7d-b938-75f026e2a85f)
+
+### Transfer Funds: Transfer Success
 
 ![image](https://github.com/user-attachments/assets/2fb9332f-9917-4d54-85f1-23edda9a8c9b)
 
+## Transaction History
+
 ![image](https://github.com/user-attachments/assets/8a5e2d7e-4c73-42ae-8660-b2ce0fe842a9)
 
+### Transaction History: Filter Transcation based on Account
+
 ![image](https://github.com/user-attachments/assets/7d6402f3-dad0-4282-a2c2-768cfc14b853)
+
+### Transaction History: Filtered based on the selected Account
 
 ![image](https://github.com/user-attachments/assets/49f59d93-f00e-4e63-be5e-014045dba839)
 

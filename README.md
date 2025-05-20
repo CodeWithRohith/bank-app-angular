@@ -1,59 +1,161 @@
-# BankApp
+# 💰 BrainRidge Banking App – Take-Home Assignment
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+This is a simple banking application built using **Angular** for the BrainRidge Consulting take-home assignment.
 
-## Development server
+Users can:
+- Create bank accounts
+- Transfer funds between accounts
+- View transaction history
+- Navigate using a clean UI built with Bootstrap
+- Reuse components and maintain a modular codebase
 
-To start a local development server, run:
+---
+
+## 🚀 Features
+
+✅ **Account Creation**  
+- Reactive Form with validation (name, balance, account type)  
+- Submit button styled conditionally (based on account type)
+
+✅ **Fund Transfer**  
+- Dropdowns populated with created accounts  
+- Transfer validation: no self-transfer, sufficient balance required  
+- Styled success/failure message with account names/types
+
+✅ **Transaction History**  
+- View a complete table of all transfers  
+- Shows From, To, Amount, and Timestamp  
+- Filter by specific account
+
+✅ **Reusable Components**  
+- Custom `<app-button>` component  
+- Accepts `label`, `type`, and `disabled` props
+
+✅ **Routing**  
+- Three views: `/create-account`, `/transfer`, and `/history`
+
+✅ **Bootstrap Styling**  
+- Responsive layout with navbar, cards, alerts, and table design
+
+---
+
+## 🧩 Tech Stack
+
+- [Angular 17+](https://angular.io/)
+- TypeScript
+- Bootstrap 5 (CDN)
+- RxJS & Reactive Forms
+- Standalone Components
+
+---
+
+## 📁 Folder Structure (Simplified)
+
+src/
+├── app/
+
+│ ├── components/
+
+│ │ ├── account-create/
+
+│ │ ├── fund-transfer/
+
+│ │ ├── transaction-history/
+
+│ ├── shared/
+
+│ │ └── button/ # Reusable button component
+
+│ ├── services/
+
+│ │ └── account.service.ts
+
+│ ├── app.routes.ts
+
+│ ├── app.config.ts
+
+
+---
+
+## 🛠️ How to Run the Project
+
 
 ```bash
+1. Clone the repo
+
+git clone https://github.com/CodeWithRohith/bank-app.git
+cd angular-banking-app
+
+2. Install dependencies
+
+npm install
+
+3. Run the development server
+
 ng serve
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser and visit:
+📍 http://localhost:4200
 
-## Code scaffolding
+🔖 Screenshots
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Create New Account
+![image](https://github.com/user-attachments/assets/76288e8e-36d8-4ed0-be1c-2ba9dfceb75a)
 
-```bash
-ng generate component component-name
-```
+### Create New Account: Validation Error
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+![image](https://github.com/user-attachments/assets/003a7be4-2141-4c02-add7-d5bc800d828c)
 
-```bash
-ng generate --help
-```
+### Create New Account: Create Button Enabled after the all the fields are filled correctly
 
-## Building
+![image](https://github.com/user-attachments/assets/e123c746-c80b-4999-a09e-eff3f5d8a206)
 
-To build the project run:
+### Create New Account: Account Created
 
-```bash
-ng build
-```
+![image](https://github.com/user-attachments/assets/7a9f296e-5fe4-461b-9776-e14036571034)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Transfer Funds
 
-## Running unit tests
+![image](https://github.com/user-attachments/assets/0304f36c-9695-4903-9172-2b8c005cb9de)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Transfer Funds: Drop-Down to choose the Account
 
-```bash
-ng test
-```
+![image](https://github.com/user-attachments/assets/7434bd12-bbb6-4a40-9537-64dc4fd91d0e)
 
-## Running end-to-end tests
+### Transfer Funds: Failed (Trying to Transfer Funds between Same Account)
 
-For end-to-end (e2e) testing, run:
+![image](https://github.com/user-attachments/assets/67de614f-c219-4a52-8dfc-c42554df92d0)
 
-```bash
-ng e2e
-```
+### Transfer Funds: Sucess
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+![image](https://github.com/user-attachments/assets/fd7410e1-bd6a-4fbd-8fba-1383e396e00d)
 
-## Additional Resources
+## Transaction History
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![image](https://github.com/user-attachments/assets/08e8e689-80a4-4708-a2b5-0978e26c6c28)
+
+### Transaction History: Option to Filter Based on Account
+
+![image](https://github.com/user-attachments/assets/b09c72d7-01d4-4485-b67d-02b8cc6d8b07)
+
+### Transaction History: Filtered by John (Chequing)
+
+![image](https://github.com/user-attachments/assets/0bdc25ae-c47e-42e4-b00a-6381d22d1e73)
+
+
+## 📌 Notes
+
+- This project is built using Angular 17+ with standalone components
+- Styling is done using Bootstrap 5 via CDN (linked in `src/index.html`)
+- No backend or database is used — data is stored temporarily in memory using Angular services
+- This project is intended as a demonstration of frontend architecture, modular design, and UI best practices
+
+---
+
+## 📬 Author
+
+**Rohith Kumar Saravanan**    
+
+

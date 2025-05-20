@@ -131,7 +131,7 @@ Open your browser and visit:
 
 ![image](https://github.com/user-attachments/assets/cd49d69a-b091-4692-9d3a-1109572b8804)
 
-### Create Account: Prompt asking if check different user (Name + Account Type)
+### Create Account: Prompt asking, account for a different user (Name + Account Type, match)
 
 ![image](https://github.com/user-attachments/assets/330454fb-9ba1-428a-a928-8938f85e30b7)
 
@@ -143,7 +143,7 @@ Open your browser and visit:
 
 ![image](https://github.com/user-attachments/assets/5da4015b-651d-48c4-8acb-0edafa4a333d)
 
-### Transfer Funds: Same Account, Fail
+### Transfer Funds: Same Account, Failed
 
 ![image](https://github.com/user-attachments/assets/e173fbc8-2473-4e7d-b938-75f026e2a85f)
 

@@ -7,7 +7,7 @@
     <select class="form-select" [(ngModel)]="selectedAccountId">
       <option [ngValue]="0">-- All Accounts --</option>
       <option *ngFor="let acc of accounts" [ngValue]="acc.id">
-        {{ acc.name }} ({{ acc.type }})
+        {{ acc.name }} ({{ acc.type }}) ({{ acc.accountNumber }})
       </option>
     </select>
   </div>
@@ -26,8 +26,8 @@
     <tbody>
       <tr *ngFor="let tx of filteredTransactions">
         <td>{{ tx.id }}</td>
-        <td>{{ getAccountName(tx.fromId) }}</td>
-        <td>{{ getAccountName(tx.toId) }}</td>
+        <td>{{ getAccountDisplay(tx.fromId) }}</td>
+        <td>{{ getAccountDisplay(tx.toId) }}</td>
         <td>${{ tx.amount }}</td>
         <td>{{ tx.date | date:'short' }}</td>
       </tr>

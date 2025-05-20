@@ -1,10 +1,11 @@
 <div class="container mt-5">
   <h2>Create New Account</h2>
+
   <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
     
     <div class="mb-3">
       <label class="form-label">Account Name</label>
-      <input type="text" class="form-control" formControlName="accountName">
+      <input type="text" class="form-control" formControlName="accountName" required>
       <div *ngIf="accountForm.get('accountName')?.invalid && accountForm.get('accountName')?.touched" class="text-danger">
         Name is required (min 3 characters)
       </div>
@@ -12,7 +13,7 @@
 
     <div class="mb-3">
       <label class="form-label">Initial Balance</label>
-      <input type="number" class="form-control" formControlName="initialBalance">
+      <input type="number" class="form-control" formControlName="initialBalance" required>
       <div *ngIf="accountForm.get('initialBalance')?.invalid && accountForm.get('initialBalance')?.touched" class="text-danger">
         Must be greater than 0
       </div>
@@ -20,32 +21,33 @@
 
     <div class="mb-3">
       <label class="form-label">Account Type</label><br>
-      <div class="form-check form-check-inline">
-        <input type="radio" class="form-check-input" value="chequing" formControlName="accountType">
+      <div class="form-check form-check-inline me-3">
+        <input type="radio" class="form-check-input" name="accountType" value="chequing" formControlName="accountType" required>
         <label class="form-check-label">Chequing</label>
       </div>
       <div class="form-check form-check-inline">
-        <input type="radio" class="form-check-input" value="savings" formControlName="accountType">
+        <input type="radio" class="form-check-input" name="accountType" value="savings" formControlName="accountType" required>
         <label class="form-check-label">Savings</label>
       </div>
     </div>
 
     <app-button
-    [label]="'Create Account'"
-    [type]="accountType || 'default'"
-    [disabled]="accountForm.invalid"></app-button>
-
+      [label]="'Create Account'"
+      [type]="accountType || 'default'"
+      [disabled]="accountForm.invalid">
+    </app-button>
 
   </form>
+
   <div *ngIf="lastCreatedAccount" class="card mt-4 shadow-sm">
     <div class="card-body">
-        <h5 class="card-title text-success">Account Created 🎉</h5>
-        <p class="card-text">
+      <h5 class="card-title text-success">Account Created 🎉</h5>
+      <p class="card-text">
         Name: <strong>{{ lastCreatedAccount.name }}</strong><br>
         Type: <strong>{{ lastCreatedAccount.type }}</strong><br>
-        Balance: <strong>${{ lastCreatedAccount.balance }}</strong>
-        </p>
+        Balance: <strong>${{ lastCreatedAccount.balance }}</strong><br>
+        Account Number: <strong>{{ lastCreatedAccount.accountNumber }}</strong>
+      </p>
     </div>
-    </div>
-
+  </div>
 </div>

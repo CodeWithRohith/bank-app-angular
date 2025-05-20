@@ -1,4 +1,3 @@
-<p>fund-transfer works!</p>
 <div class="container mt-5">
   <h2>Transfer Funds</h2>
 
@@ -9,7 +8,7 @@
       <select class="form-select" formControlName="fromAccount">
         <option [ngValue]="null" disabled>Select an account</option>
         <option *ngFor="let acc of accounts" [ngValue]="acc.id">
-            {{ acc.name }} ({{ acc.type }}) - ${{ acc.balance }}
+            {{ acc.name }} ({{ acc.type }}) ({{ acc.accountNumber }}) - ${{ acc.balance }}
         </option>
       </select>
     </div>
@@ -19,7 +18,7 @@
       <select class="form-select" formControlName="toAccount">
         <option [ngValue]="null" disabled>Select an account</option>
         <option *ngFor="let acc of accounts" [ngValue]="acc.id">
-            {{ acc.name }} ({{ acc.type }}) - ${{ acc.balance }}
+            {{ acc.name }} ({{ acc.type }}) ({{ acc.accountNumber }}) - ${{ acc.balance }}
         </option>
       </select>
     </div>

@@ -1,91 +1,55 @@
 # 💰 BrainRidge Banking App – Take-Home Assignment
 
-This is a simple banking application built using **Angular** for the BrainRidge Consulting take-home assignment.
-
-Users can:
-- Create bank accounts with unique account numbers
-- Transfer funds between accounts with validations
-- View detailed transaction history
-- Navigate seamlessly using Angular Routing
-- Experience a polished, responsive UI with Bootstrap
-- Benefit from reusable and modular components
+## Overview
+The BrainRidge Banking App is a sleek and modern banking interface built as a take-home assignment for BrainRidge Consulting. Developed with **Angular 17+**, this application empowers users to create bank accounts, perform secure fund transfers, and track comprehensive transaction histories—all within a clean, responsive, and intuitive interface.
 
 ---
 
 ## 🚀 Features
 
-✅ **Account Creation**  
-- Reactive Form with validation (name, balance, account type)  
-- Duplicate check: warns if same name + type exists, with option to proceed or cancel  
-- Auto-generated unique 8-digit account number  
-- Form resets and displays success card after creation  
-- Stylized submit button adjusts color based on account type
+### Account Creation
+- **Reactive Forms:** Validate input fields (name, balance, account type) in real time.
+- **Unique Account Numbers:** Auto-generate a distinct 8-digit number for every new account.
+- **Duplicate Check:** Notifies users if an account with the same name and type already exists, allowing them to confirm or cancel the creation.
+- **Visual Feedback:** Resets the form and displays a success card after account creation.
+- **Dynamic Styling:** Adjusts the submit button's color based on the selected account type.
 
-✅ **Fund Transfer**  
-- Transfer funds between any two different accounts  
-- Prevents self-transfer and insufficient balance  
-- Account details shown in confirmation message: name, type, account number  
-- Form resets after success
+### Fund Transfer
+- **Seamless Transactions:** Easily transfer funds between two distinct accounts.
+- **Robust Validations:** Prevents self-transfers and checks for sufficient account balance.
+- **Detailed Confirmation:** Displays sender and receiver details including account names, types, and unique numbers.
+- **Automatic Reset:** Resets the form promptly after a successful transfer.
 
-✅ **Transaction History**  
-- View full history of all transfers  
-- Shows sender and receiver details with account number and type  
-- Filter transactions based on specific account  
-- Table is styled, centered, and easy to read
+### Transaction History
+- **Comprehensive Log:** View the full history of all fund transfers.
+- **Intuitive Filtering:** Filter transactions by specific accounts to quickly locate relevant records.
+- **Clean Design:** A styled, centered table offers a clear and easy-to-read presentation of past transactions.
 
-✅ **Reusable Components**  
-- Custom `<app-button>` component  
-- Accepts `label`, `type`, and `disabled`  
-- Used across all forms for consistent design
+### Reusable Components
+- **Custom `<app-button>`:** A consistent, reusable button component accepting dynamic labels, types, and disabled states for uniform design throughout the app.
 
-✅ **Routing**  
-- Three-page structure:  
-  - `/create-account`  
-  - `/transfer`  
+### Routing & UI
+- **Intuitive Navigation:** Organized into three primary routes:
+  - `/create-account`
+  - `/transfer`
   - `/history`
-
-✅ **Bootstrap Styling**  
-- CDN-based Bootstrap 5  
-- Cards, navbar, alerts, and spacing for a clean responsive UI
+- **Bootstrap Styling:** Utilizes Bootstrap 5 (via CDN) for a responsive UI featuring polished cards, navigation bars, and alerts.
 
 ---
 
 ## 🧩 Tech Stack
 
-- [Angular 17+](https://angular.io/)
-- TypeScript
-- Bootstrap 5 (CDN)
-- RxJS & Reactive Forms
-- Standalone Components
-- HTML5 + SCSS
+- **Angular 17+** — [Angular Official Website](https://angular.io/)
+- **TypeScript**
+- **Bootstrap 5** (CDN-based)
+- **RxJS & Reactive Forms**
+- **Standalone Components**
+- **HTML5 & SCSS**
 
 ---
 
-## 📁 Folder Structure (Simplified)
-
-src/
-
-├── app/
-
-│ ├── components/
-
-│ │ ├── account-create/
-
-│ │ ├── fund-transfer/
-
-│ │ ├── transaction-history/
-
-│ ├── shared/
-
-│ │ └── button/ # Reusable button component
-
-│ ├── services/
-
-│ │ └── account.service.ts
-
-│ ├── app.routes.ts
-
-│ ├── app.config.ts
+## 📁 Folder Structure
+![image](https://github.com/user-attachments/assets/bf7105f0-cdef-48da-af39-b5a2a2bcb94a)
 
 
 ---
@@ -93,7 +57,7 @@ src/
 ## 🛠️ How to Run the Project
 
 ```bash
-# 1. Clone the repo
+# 1. Clone the repository
 git clone https://github.com/CodeWithRohith/bank-app.git
 cd angular-banking-app
 
@@ -104,80 +68,75 @@ npm install
 ng serve
 ```
 
-Open your browser and visit:
-📍 http://localhost:4200
-
----
+Open your browser and navigate to: http://localhost:4200
 
 ## 🔖 Screenshots
 
-## Create Account
+### Create Account
 
-![image](https://github.com/user-attachments/assets/6e93c29e-e9ce-4f7b-8eae-b2f0234a8092)
+![image](https://github.com/user-attachments/assets/4a5cc888-388b-41f2-8517-523ed575461d)
 
-### Create Account: Validation Error
+Validation Error
 
-![image](https://github.com/user-attachments/assets/d5d79b7a-ec0b-4970-a2b7-1682dd77c2ea)
+![image](https://github.com/user-attachments/assets/0f4b334a-365d-47b8-ae32-ad4d4cd32a70)
 
-### Create Account: Creating New Chequing Account (Blue Button)
+Chequing Account – Blue Button
 
-![image](https://github.com/user-attachments/assets/c506da07-ad33-4cd5-851d-85db5a02174a)
+![image](https://github.com/user-attachments/assets/19ea8e29-33d9-44e7-aafa-8246cf4a8b3d)
 
-### Create Account: Account Created
+Account Created
 
-![image](https://github.com/user-attachments/assets/94634711-99a3-47b9-9576-1953b8e3a118)
+![image](https://github.com/user-attachments/assets/1e63ef5b-6ec3-4762-b578-0f2e280b8838)
 
-### Create Account: Creating New Savings Account (Green Button)
+Savings Account – Green Button
 
-![image](https://github.com/user-attachments/assets/cd49d69a-b091-4692-9d3a-1109572b8804)
+![image](https://github.com/user-attachments/assets/a8780dc7-befa-4111-874f-52d1c74ea67b)
 
-### Create Account: Prompt asking, account for a different user (Name + Account Type, match)
+Duplicate Warning Prompt
 
-![image](https://github.com/user-attachments/assets/330454fb-9ba1-428a-a928-8938f85e30b7)
+![image](https://github.com/user-attachments/assets/5c7a0389-784b-40e8-9b64-a6715c13a87e)
 
-## Transfer Funds
+Transfer Funds
 
-![image](https://github.com/user-attachments/assets/fa9c6ff2-6221-4ec9-b634-917285bd76e4)
+![image](https://github.com/user-attachments/assets/a5c7bed6-e100-46dd-9271-caf9ac3174d1)
 
-### Transfer Funds: Select Account from Drop-Down
+Select Account Dropdown
 
-![image](https://github.com/user-attachments/assets/5da4015b-651d-48c4-8acb-0edafa4a333d)
+![image](https://github.com/user-attachments/assets/f2fc5138-f08c-457b-97a6-a6405d0cd53f)
 
-### Transfer Funds: Same Account, Failed
+Failed Transfer – Same Account
 
-![image](https://github.com/user-attachments/assets/e173fbc8-2473-4e7d-b938-75f026e2a85f)
+![image](https://github.com/user-attachments/assets/860ef437-f09e-45b9-8377-44b2346fffe7)
 
-### Transfer Funds: Transfer Success
+Successful Transfer
 
-![image](https://github.com/user-attachments/assets/2fb9332f-9917-4d54-85f1-23edda9a8c9b)
+![image](https://github.com/user-attachments/assets/84f0c8b3-d1c6-4b6d-a165-a1ac4099e171)
 
-## Transaction History
+Transaction History
 
-![image](https://github.com/user-attachments/assets/8a5e2d7e-4c73-42ae-8660-b2ce0fe842a9)
+![image](https://github.com/user-attachments/assets/f20f6573-0f9e-4e11-b0ee-4408a9b5c28b)
 
-### Transaction History: Filter Transcation based on Account
+Filter by Account
 
-![image](https://github.com/user-attachments/assets/7d6402f3-dad0-4282-a2c2-768cfc14b853)
+![image](https://github.com/user-attachments/assets/6c77ecdd-c89b-4499-b7dd-d276c5329681)
 
-### Transaction History: Filtered based on the selected Account
+Filtered View
 
-![image](https://github.com/user-attachments/assets/49f59d93-f00e-4e63-be5e-014045dba839)
-
+![image](https://github.com/user-attachments/assets/8105393f-7379-41ff-ac81-c82aa540a97d)
 
 ## 📌 Notes
-- This project is built using Angular 17+ with standalone components
 
-- Styling is done using Bootstrap 5 via CDN (linked in src/index.html)
+- Angular 17+ with standalone components
+- Bootstrap 5 for responsive UI (CDN included in index.html)
+- Data is stored in-memory via Angular Services (no backend/database)
+- Validation includes duplicate name + account type check
+- Unique 8-digit account numbers for each account
+- Project showcases modular architecture and real-world form validation techniques
 
-- No backend or database is used — data is stored temporarily in memory using Angular services
+## 👨‍💻 Author
 
-- Duplicate name + type accounts prompt user confirmation
+### Rohith Kumar Saravanan - (https://codewithrohith.github.io/)
 
-- Account numbers are auto-generated and uniquely identify each account
 
-- This project demonstrates clean component-based structure and real-world form validation patterns
-
-## 📬 Author
-Rohith Kumar Saravanan
 
 

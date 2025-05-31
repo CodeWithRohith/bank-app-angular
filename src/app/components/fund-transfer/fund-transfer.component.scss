@@ -1,0 +1,72 @@
+.container {
+  max-width: 650px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #ffffff, #f1f2f6);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+label.form-label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.4rem;
+}
+
+input.form-control,
+select.form-select {
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: #fff;
+  border: 1.5px solid #ced6e0;
+  transition: border-color 0.3s ease;
+}
+
+input.form-control:focus,
+select.form-select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.2);
+}
+
+option {
+  padding: 0.5rem;
+}
+
+app-button {
+  display: block;
+  margin: 2rem auto 0;
+  max-width: 220px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.alert {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.alert-success {
+  background: #e0f7e9;
+  color: #2ecc71;
+  border-left: 5px solid #2ecc71;
+}
+
+.alert-danger {
+  background: #fdecea;
+  color: #e74c3c;
+  border-left: 5px solid #e74c3c;
+}

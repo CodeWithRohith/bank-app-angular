@@ -1,0 +1,56 @@
+.container {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+label {
+  font-weight: 500;
+  color: #004d40;
+}
+
+.form-select {
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: 1px solid #b2dfdb;
+  background-color: #f1fdfb;
+  color: #004d40;
+}
+
+.table {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+}
+
+.table thead {
+  background-color: #00796b;
+  color: #ffffff;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background-color: #e0f2f1;
+}
+
+.text-muted {
+  text-align: center;
+  font-style: italic;
+  margin-top: 2rem;
+  color: #757575;
+}
